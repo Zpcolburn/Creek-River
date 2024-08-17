@@ -30,14 +30,14 @@ public class CreekRiverDbContext : DbContext
             new Campsite {Id = 2, CampsiteTypeId = 2, Nickname = "Moonlit Meadows", ImageUrl="https://img.freepik.com/premium-photo/moonlit-meadow-escape-camping-scene-photo_960396-20664.jpg"},
             new Campsite {Id = 3, CampsiteTypeId = 3, Nickname = "Hidden Hollow", ImageUrl=""},
             new Campsite {Id = 4, CampsiteTypeId = 4, Nickname = "Timber Ridge", ImageUrl="https://www.fs.usda.gov/Internet/FSE_MEDIA/fseprd923724.jpg"},
-            new Campsite {Id = 5, CampsiteTypeId = 5, Nickname = "Sunset Summit", ImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7o0gFDpTWdUf0xpHA1mmdw3qXp5LMQvxAXQ&s"},
-            new Campsite {Id = 6, CampsiteTypeId = 6, Nickname = "Forest Glade", ImageUrl="https://img.freepik.com/premium-photo/catwalk-with-simulated-forest-glade-camping-equipment-solid-color-background-4k-ultra-hd_964851-140379.jpg"},
-            new Campsite {Id = 7, CampsiteTypeId = 7, Nickname = "Riverbend Refuge", ImageUrl="https://koa.com/content/campgrounds/burney-falls/sectionheaders/05471sectionheaderse8e56bd3-3ab7-49b9-8d14-0f5849c13899.jpg?preset=hero-sm"}
+            new Campsite {Id = 5, CampsiteTypeId = 4, Nickname = "Sunset Summit", ImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7o0gFDpTWdUf0xpHA1mmdw3qXp5LMQvxAXQ&s"},
+            new Campsite {Id = 6, CampsiteTypeId = 3, Nickname = "Forest Glade", ImageUrl="https://img.freepik.com/premium-photo/catwalk-with-simulated-forest-glade-camping-equipment-solid-color-background-4k-ultra-hd_964851-140379.jpg"},
+            new Campsite {Id = 7, CampsiteTypeId = 2, Nickname = "Riverbend Refuge", ImageUrl="https://koa.com/content/campgrounds/burney-falls/sectionheaders/05471sectionheaderse8e56bd3-3ab7-49b9-8d14-0f5849c13899.jpg?preset=hero-sm"}
         });
 
         modelBuilder.Entity<UserProfile>().HasData(new UserProfile[]
         {
-           new UserProfile {Id = 1, FirstName = "Zach", LastName = "Colburn", Email = "colburn.ach7@gmail.com"},
+           new UserProfile {Id = 1, FirstName = "Zach", LastName = "Colburn", Email = "colburn.zach7@gmail.com"},
         });
 
         modelBuilder.Entity<Reservation>().HasData(new Reservation[]
