@@ -33,7 +33,6 @@ namespace CreekRiver.Migrations
                         .HasColumnType("integer");
 
                     b.Property<string>("ImageUrl")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Nickname")
@@ -78,21 +77,21 @@ namespace CreekRiver.Migrations
                         new
                         {
                             Id = 5,
-                            CampsiteTypeId = 5,
+                            CampsiteTypeId = 4,
                             ImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7o0gFDpTWdUf0xpHA1mmdw3qXp5LMQvxAXQ&s",
                             Nickname = "Sunset Summit"
                         },
                         new
                         {
                             Id = 6,
-                            CampsiteTypeId = 6,
+                            CampsiteTypeId = 3,
                             ImageUrl = "https://img.freepik.com/premium-photo/catwalk-with-simulated-forest-glade-camping-equipment-solid-color-background-4k-ultra-hd_964851-140379.jpg",
                             Nickname = "Forest Glade"
                         },
                         new
                         {
                             Id = 7,
-                            CampsiteTypeId = 7,
+                            CampsiteTypeId = 2,
                             ImageUrl = "https://koa.com/content/campgrounds/burney-falls/sectionheaders/05471sectionheaderse8e56bd3-3ab7-49b9-8d14-0f5849c13899.jpg?preset=hero-sm",
                             Nickname = "Riverbend Refuge"
                         });
@@ -218,7 +217,7 @@ namespace CreekRiver.Migrations
                         new
                         {
                             Id = 1,
-                            Email = "colburn.ach7@gmail.com",
+                            Email = "colburn.zach7@gmail.com",
                             FirstName = "Zach",
                             LastName = "Colburn"
                         });

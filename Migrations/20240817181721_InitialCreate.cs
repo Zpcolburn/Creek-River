@@ -47,7 +47,7 @@ namespace CreekRiver.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Nickname = table.Column<string>(type: "text", nullable: false),
-                    ImageUrl = table.Column<string>(type: "text", nullable: false),
+                    ImageUrl = table.Column<string>(type: "text", nullable: true),
                     CampsiteTypeId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
@@ -101,19 +101,9 @@ namespace CreekRiver.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "Campsites",
-                columns: new[] { "Id", "CampsiteTypeId", "ImageUrl", "Nickname" },
-                values: new object[,]
-                {
-                    { 5, 5, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7o0gFDpTWdUf0xpHA1mmdw3qXp5LMQvxAXQ&s", "Sunset Summit" },
-                    { 6, 6, "https://img.freepik.com/premium-photo/catwalk-with-simulated-forest-glade-camping-equipment-solid-color-background-4k-ultra-hd_964851-140379.jpg", "Forest Glade" },
-                    { 7, 7, "https://koa.com/content/campgrounds/burney-falls/sectionheaders/05471sectionheaderse8e56bd3-3ab7-49b9-8d14-0f5849c13899.jpg?preset=hero-sm", "Riverbend Refuge" }
-                });
-
-            migrationBuilder.InsertData(
                 table: "UserProfiles",
                 columns: new[] { "Id", "Email", "FirstName", "LastName" },
-                values: new object[] { 1, "colburn.ach7@gmail.com", "Zach", "Colburn" });
+                values: new object[] { 1, "colburn.zach7@gmail.com", "Zach", "Colburn" });
 
             migrationBuilder.InsertData(
                 table: "Campsites",
@@ -123,7 +113,10 @@ namespace CreekRiver.Migrations
                     { 1, 1, "https://tnstateparks.com/assets/images/content-images/campgrounds/249/colsp-area2-site73.jpg", "Barred Owl" },
                     { 2, 2, "https://img.freepik.com/premium-photo/moonlit-meadow-escape-camping-scene-photo_960396-20664.jpg", "Moonlit Meadows" },
                     { 3, 3, "", "Hidden Hollow" },
-                    { 4, 4, "https://www.fs.usda.gov/Internet/FSE_MEDIA/fseprd923724.jpg", "Timber Ridge" }
+                    { 4, 4, "https://www.fs.usda.gov/Internet/FSE_MEDIA/fseprd923724.jpg", "Timber Ridge" },
+                    { 5, 4, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7o0gFDpTWdUf0xpHA1mmdw3qXp5LMQvxAXQ&s", "Sunset Summit" },
+                    { 6, 3, "https://img.freepik.com/premium-photo/catwalk-with-simulated-forest-glade-camping-equipment-solid-color-background-4k-ultra-hd_964851-140379.jpg", "Forest Glade" },
+                    { 7, 2, "https://koa.com/content/campgrounds/burney-falls/sectionheaders/05471sectionheaderse8e56bd3-3ab7-49b9-8d14-0f5849c13899.jpg?preset=hero-sm", "Riverbend Refuge" }
                 });
 
             migrationBuilder.InsertData(
