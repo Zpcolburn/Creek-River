@@ -93,4 +93,19 @@ app.MapGet("/api/reservations", (CreekRiverDbContext db) =>
         .ToList();
 });
 
+app.MapPost("/api/reservations", (CreekRiverDbContext db, Reservation newRes) =>
+{
+    db.Reservations.Add(newRes);
+    try
+    {
+        db.Reservations.Add(newRes);
+        db.SaveChanges();
+        return Results.Created($"/api/reservations/{newRes.Id}", newRes);
+    }
+    catch (DbUpdateException)
+    {
+        return Results.BadRequest("Invalid data submitted");
+    }
+});
+
 app.Run();
